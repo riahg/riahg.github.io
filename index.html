@@ -11,8 +11,10 @@ var day_str = dayOfWeekAsString(today.getDay());
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('txt1').innerHTML =
-    h + ":" + m ;
+    h + ":" + m +":";
     document.getElementById('txt2').innerHTML =
+    s;
+    document.getElementById('txt3').innerHTML =
     day_str + " - " + today.getDate() + "." + (today.getMonth()+1) + "." + today.getFullYear();
      var t = setTimeout(startTime, 1000);
 }
@@ -31,43 +33,35 @@ function checkTime(i) {
 function dayOfWeekAsString(dayIndex) {
   return ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dayIndex];
 }
-/**
-* Converts a month number to a string.
-*/
-function monthAsString(monthIndex) {
-  return ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][monthIndex];
-}
-
-
 
 </script>
 <style>
-h1 {
-    font-size: 750%;
-    font-family:Verdana, Geneva, sans-serif;
-}
-h2 {
-    font-size: 500%;
-    font-family:Verdana, Geneva, sans-serif;
-}
-p{
+div{
     font-family:Verdana, Geneva, sans-serif;
     padding: 0px 0px 0px 0px;
     margin: 20px 0px 0px 50px;
 }
-p.clock {
-    font-size: 1500%;
+#txt1 {
+    font-size: 1000%;
+    display:inline;
 }
-p.date_str {
+#txt2 {
+    font-size: 250%;
+    display:inline;
+    margin: 00px 0px 0px 0px;
+}
+#txt3 {
     font-size: 400%;
- }
+    
+}
 
 </style>
 </head>
 
 <body onload="startTime()">
-<p class="clock" id="txt1"></p>
-<p class="date_str" id="txt2"></p>
+<div id="txt1"></div>
+<div id="txt2"></div>
+<div id="txt3"></div>
 
 
 </body>
