@@ -14,7 +14,7 @@ var day_str = dayOfWeekAsString(today.getDay());
     h + ":" + m ;
     document.getElementById('txt2').innerHTML =
     day_str + " - " + today.getDate() + "." + (today.getMonth()+1) + "." + today.getFullYear();
-     var t = setTimeout(startTime, 60000);
+     var t = setTimeout(startTime, 1000);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
