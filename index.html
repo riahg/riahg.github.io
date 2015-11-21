@@ -11,7 +11,7 @@ var day_str = dayOfWeekAsString(today.getDay());
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('txt1').innerHTML =
-    h + ":" + m +":";
+    h + ":" + m ;
     document.getElementById('txt2').innerHTML =
     s;
     document.getElementById('txt3').innerHTML =
@@ -42,13 +42,14 @@ div{
     margin: 20px 0px 0px 50px;
 }
 #txt1 {
-    font-size: 1000%;
+    font-size: 200px;
     display:inline;
 }
 #txt2 {
-    font-size: 250%;
+    font-size: 75px;
     display:inline;
-    margin: 00px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    vertical-align: 100%;
 }
 #txt3 {
     font-size: 400%;
